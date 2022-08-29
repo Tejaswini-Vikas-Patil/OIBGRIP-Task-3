@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="C:\Users\tejaswini\vscode\oasis_intern\Task3\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\tejaswini\vscode\oasis_intern\Task3\style.css">
+    <title>Task_3 level_1 Oasis Infobyte Internship</title>
+</head>
+<script>
+   
+    var par = document.querySelector("#par");
+    let temprature = () => {
+        let opt = document.querySelector("#unit");
+        let display = document.querySelector(".value");
+        var a = document.querySelector(".takval").value;
+        if (opt.value == "Celsius") {
+            console.log(a, "C to F", opt.value)
+            let F = a * (9 / 5) + 32
+            display.innerHTML = F.toFixed(4) + " F"
+            
+        } else {
+            console.log(a, "F to C", opt.value)
+            let C = (a - 32) * (5 / 9)
+            display.innerHTML = C.toFixed(4) + " ºC"
+            
+        }
+    }
+</script>
+
+<body>
+    <div class="container">
+        <div class="hed">Temperature Converter</div>
+        <div class="emoji">
+            <i id="icon" class="fa-solid fa-face-grin"></i>
+            <p id="par"></p>
+        </div>
+        <div class="boxcontainer">
+            <div class="box1">
+                <p>Degree</p>
+                <input type="number" class="takval" />
+            </div>
+            <div class="box1">
+                <p>Type</p>
+                <select name="" id="unit">
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Celsius">Celsious</option>
+                </select>
+            </div>
+        </div>
+        <div class="valuecontainer">
+            <p>Result</p>
+            <div class="value"></div>
+        </div>
+        <button onclick="temprature()" class="button">Convert</button>
+    </div>
+</body>
+
+
+
+</html>
